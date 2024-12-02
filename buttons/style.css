@@ -16,14 +16,14 @@ body {
     background: #0c2461;
 }
 
-.container .button {
+.container .glass-button {
     position: relative;
     width: 155px;
     height: 50px;
     margin: 20px;
 }
 
-.button a {
+.glass-button a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,13 +48,13 @@ body {
     backdrop-filter: blur(15px);
 }
 
-.button a:hover {
+.glass-button a:hover {
     letter-spacing: 3px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.button a::before {
+.glass-button a::before {
     content: '';
     position: absolute;
     top: 0;
@@ -67,12 +67,12 @@ body {
     transition-delay: 0.5s;
 }
 
-.button a:hover::before {
+.glass-button a:hover::before {
     transform: skewX(45deg) translateX(200%);
     transition-delay: 0s;
 }
 
-.button::before {
+.glass-button::before {
     content: '';
     position: absolute;
     left: 50%;
@@ -89,7 +89,7 @@ body {
     mix-blend-mode: screen;
 }
 
-.button:hover::before {
+.glass-button:hover::before {
     bottom: 0;
     height: 50%;
     width: 80%;
@@ -97,7 +97,7 @@ body {
     transition-delay: 0.5s;
 }
 
-.button::after {
+.glass-button::after {
     content: '';
     position: absolute;
     left: 50%;
@@ -114,7 +114,7 @@ body {
     mix-blend-mode: screen;
 }
 
-.button:hover::after {
+.glass-button:hover::after {
     top: 0;
     height: 50%;
     width: 80%;
@@ -122,7 +122,7 @@ body {
     transition-delay: 0.5s;
 }
 
-.button::before {
+.glass-button::before {
     background: #4ceffe;
     box-shadow: 0 0 5px #4ceffe, 
     0 0 15px #4ceffe, 
@@ -130,7 +130,7 @@ body {
     0 0 60px #4ceffe;
 }
 
-.button::after {
+.glass-button::after {
     background: lime;
     box-shadow: 0 0 5px lime, 
     0 0 15px lime, 
