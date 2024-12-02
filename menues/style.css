@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #0c2461;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.menu {
+    display: flex;    
+}
+
+.menu a {
+    position: relative;
+    font-size: 1.5em;
+    text-decoration: none;
+    color: silver;
+}
+
+.menu-01 a {
+    transition: 0.5s;
+    margin: 0 20px;
+}
+
+.menu-01 a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #4ceffe;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+    box-shadow: 0 0 5px #4ceffe, 
+    0 0 15px #4ceffe, 
+    0 0 30px #4ceffe, 
+    0 0 60px #4ceffe;
+}
+
+.menu-01 a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.menu-01 a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #4ceffe;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s;
+    box-shadow: 0 0 5px #4ceffe, 
+    0 0 15px #4ceffe, 
+    0 0 30px #4ceffe, 
+    0 0 60px #4ceffe;
+}
+
+.menu-01 a:hover::after {
+    transform: scaleX(1);
+    transform-origin: right;
+}
+
+.menu-02 a {
+    position: relative;
+    transition: all 0.5s;
+    margin: 0 20px;
+}
+
+.menu-02 a span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+.menu-02 a span:nth-child(1) {
+    transform-origin: top;
+    transform: rotateX(0deg);
+    transition: all 0.5s;
+    transition-delay: .25s;
+}
+
+.menu-02 a:hover span:nth-child(1) {
+    transform: rotateX(90deg);
+    transition-delay: 0s;
+}
+
+.menu-02 a span:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotateX(90deg);
+    transform-origin: bottom;
+    color: #4ceffe;
+    text-shadow: 0 0 5px #4ceffe, 
+    0 0 15px #4ceffe, 
+    0 0 30px #4ceffe, 
+    0 0 60px #4ceffe;
+    transition: all 0.5s;
+    transition-delay: 0s;
+}
+
+.menu-02 a:hover span:nth-child(2) {
+    transform: rotateX(0);
+    transition-delay: .25s;
+}
+
+.menu-03 {
+    display: block;
+}
+
+.menu-03 a {
+    position: relative;
+    font-size: 4em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1em;
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke: 1px #4ceffe;
+    transition: all 0.5s;
+}
+
+.menu-03 a::before {
+    content: attr(data-text);
+    position: absolute;
+    color: #4ceffe;
+    width: 0%;
+    overflow: hidden;
+    transition: all 0.5s;
+    border-right: 8px solid #4ceffe;
+    -webkit-text-stroke: 0;
+    transition: width 1s;
+    
+}
+
+.menu-03 a:hover::before {
+    width: 100%;
+    -webkit-text-stroke: #000 1px;
+    text-shadow: #4ceffe 0 0 5px, 
+    #4ceffe 0 0 10px,
+    #4ceffe 0 0 15px;
+}
