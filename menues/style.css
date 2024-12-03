@@ -166,3 +166,52 @@ body {
     #4ceffe 0 0 10px,
     #4ceffe 0 0 15px;
 }
+
+.menu-04 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    width: 200%;
+}
+
+.menu-04 a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1em;
+    font-weight: 700;
+    color: rgba(192, 192, 192,1);
+    transition: all 0.5s;
+}
+
+.menu-04 a::before {
+    content: attr(data-text);
+    position: absolute;
+    color: #4ceffe;
+    transition: all 1s;
+    font-size: 1.25rem;
+    font-weight: 400;
+    letter-spacing: 300px;
+    text-align: center; 
+    opacity: 0;
+}
+
+.menu-04 a:hover {
+    color: rgba(192, 192, 192,0.1);
+}
+
+.menu-04 a:hover::before {
+    transition: opacity 1s 0.25s, letter-spacing 1s;
+    letter-spacing: 3px;
+    opacity: 1;
+    text-shadow: 0 0 5px #4ceffe,
+    0 0 15px #4ceffe,
+    0 0 30px #4ceffe,
+    0 0 60px #4ceffe;
+}
