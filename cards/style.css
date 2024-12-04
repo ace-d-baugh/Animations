@@ -15,3 +15,75 @@ body {
     min-height: 100vh;
     background: #0c2461;
 }
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.card-01 {
+    position: relative;
+    width: 500px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(45deg, #2196f3, #e91e63);
+    border-radius: 20px;
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+    transition: 0.5s;
+}
+
+.card-01 img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 400px;
+    transition: 0.5s;
+}
+
+.card-01:hover img {
+    height: 450px;
+    left: 85%;
+}
+
+.card-01 .content {
+    position: relative;
+    width: 40%;
+    left: 20%;
+    color: silver;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.card-01:hover .content {
+    left: 5%;
+    opacity: 1;
+}
+
+.card-01 .content h2 {
+    font-size: 2em;
+    color: #fff;
+}
+
+.card-01 .content p {
+    font-size: 1em;
+    padding-bottom: 20px;
+    text-transform: capitalize;
+}
+
+.card-01 .content a {
+    position: relative;
+    display: inline-block;
+    padding: 5px 10px;
+    background: #fff;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #111;
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
