@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #0c2461;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.menu {
+    display: flex;    
+}
+
+.menu a {
+    position: relative;
+    font-size: 1.5em;
+    text-decoration: none;
+    color: silver;
+}
+
+.menu-04 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    width: 200%;
+}
+
+.menu-04 a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1em;
+    font-weight: 700;
+    color: rgba(192, 192, 192,1);
+    transition: all 0.5s;
+}
+
+.menu-04 a::before {
+    content: attr(data-text);
+    position: absolute;
+    color: #4ceffe;
+    transition: all .5s;
+    font-size: 1.25rem;
+    font-weight: 400;
+    letter-spacing: 275px;
+    text-align: center; 
+    opacity: 0;
+    transform: translateX(50px);
+    transform: rotate(-15deg);
+}
+
+.menu-04 a:hover {
+    color: rgba(192, 192, 192,0.1);
+}
+
+.menu-04 a:hover::before {
+    transition: all 0.5s;
+    letter-spacing: 3px;
+    opacity: 1;
+    text-shadow: 0 0 5px #4ceffe,
+    0 0 15px #4ceffe,
+    0 0 30px #4ceffe,
+    0 0 60px #4ceffe;
+    transform : translateX(0px);
+}
