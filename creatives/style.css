@@ -103,10 +103,17 @@ body {
 
 .creative-03 {
     margin-bottom: 4rem;
+    perspective: 1000px;
 }
 
 .creative-03 .deck {
-    transform: translateY(-140px);
+    width: 102px;
+    height: 25px;
+    background-color: #ddd;
+    transform: translateZ(120px) translateY(27px);
+    transform-origin: bottom;
+    z-index: -1;
+    border-radius: 0 0 5px 5px;
 }
 
 .creative-03 .spread {
@@ -120,7 +127,7 @@ body {
 .creative-03 .card {
     width: 100px;
     height: 150px;
-    background-color: silver;
+    background-color: #4ceffe;
     border-radius: 10px;
     transition: all .75s ease-in;
     display: flex;
@@ -129,69 +136,75 @@ body {
     font-size: 4em;
     color: #4ceffe;
     position: absolute;
-    top: 0;
+    bottom: 0;
     transform-origin: bottom;
     transform-style: preserve-3d;
-    transform: rotateX(270deg);
+    transform: rotateX(260deg);
+    z-index: 1;
 }
 
-.creative-03 .deck:hover .card-m {
-    transform: translateX(-240px) translatey(90px) rotate(-40deg);
+.creative-03:hover .card-m {
+    transform: translateX(-240px) translatey(80px) rotate(-40deg);
     transition-delay: 0s;
     box-shadow: #4ceffe 0px 0px 10px,
     #4ceffe 0px 0px 20px,
     #4ceffe 0px 0px 40px;
+    z-index: 3;
 }
 
-.creative-03 .deck:hover .card-m .card-back {
+.creative-03:hover .card-m .card-back {
     transform: rotateX(180deg);
 }
 
-.creative-03 .deck:hover .card-a {
-    transform: translateX(-130px) translatey(20px) rotate(-20deg);
-    transition-delay: 0.2s;
-    box-shadow: #4ceffe 0px 0px 10px,
-    #4ceffe 0px 0px 20px,
-    #4ceffe 0px 0px 40px;
-}
-
-.creative-03 .deck:hover .card-a .card-back {
-    transform: rotateX(180deg);
-}
-
-.creative-03 .deck:hover .card-g {
-    transform: translateX(0px) translatey(0px) rotate(0deg);
+.creative-03:hover .card-a {
+    transform: translateX(-130px) translatey(10px) rotate(-20deg);
     transition-delay: 0.4s;
     box-shadow: #4ceffe 0px 0px 10px,
     #4ceffe 0px 0px 20px,
     #4ceffe 0px 0px 40px;
+    z-index: 4;
 }
 
-.creative-03 .deck:hover .card-g .card-back {
+.creative-03:hover .card-a .card-back {
     transform: rotateX(180deg);
 }
 
-.creative-03 .deck:hover .card-i {
-    transform: translateX(130px) translatey(20px) rotate(20deg);
-    transition-delay: 0.6s;
-    box-shadow: #4ceffe 0px 0px 10px,
-    #4ceffe 0px 0px 20px,
-    #4ceffe 0px 0px 40px;
-}
-
-.creative-03 .deck:hover .card-i .card-back {
-    transform: rotateX(180deg);
-}
-
-.creative-03 .deck:hover .card-c {
-    transform: translateX(240px) translatey(90px) rotate(40deg);
+.creative-03:hover .card-g {
+    transform: translateX(0px) translatey(-10px) rotate(0deg);
     transition-delay: 0.8s;
     box-shadow: #4ceffe 0px 0px 10px,
     #4ceffe 0px 0px 20px,
     #4ceffe 0px 0px 40px;
+    z-index: 5;
 }
 
-.creative-03 .deck:hover .card-c .card-back {
+.creative-03:hover .card-g .card-back {
+    transform: rotateX(180deg);
+}
+
+.creative-03:hover .card-i {
+    transform: translateX(130px) translatey(10px) rotate(20deg);
+    transition-delay: 1.2s;
+    box-shadow: #4ceffe 0px 0px 10px,
+    #4ceffe 0px 0px 20px,
+    #4ceffe 0px 0px 40px;
+    z-index: 6;
+}
+
+.creative-03:hover .card-i .card-back {
+    transform: rotateX(180deg);
+}
+
+.creative-03:hover .card-c {
+    transform: translateX(240px) translatey(80px) rotate(40deg);
+    transition-delay: 1.6s;
+    box-shadow: #4ceffe 0px 0px 10px,
+    #4ceffe 0px 0px 20px,
+    #4ceffe 0px 0px 40px;
+    z-index: 7;
+}
+
+.creative-03:hover .card-c .card-back {
     transform: rotateX(180deg);
 }
 
