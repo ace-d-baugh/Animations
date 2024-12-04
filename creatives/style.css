@@ -14,6 +14,7 @@ body {
     align-items: center;
     min-height: 100vh;
     background: #0c2461;
+    padding: 20px;
 }
 
 .container {
@@ -143,30 +144,46 @@ body {
     z-index: 1;
 }
 
+.creative-03 .card-m {
+    transition: all .75s ease-in;
+    transition-delay: 1.6s;
+}
+
 .creative-03:hover .card-m {
     transform: translateX(-240px) translatey(80px) rotate(-40deg);
+    transition: all .75s ease-in;
     transition-delay: 0s;
     box-shadow: #4ceffe 0px 0px 10px,
     #4ceffe 0px 0px 20px,
     #4ceffe 0px 0px 40px;
-    z-index: 3;
 }
 
 .creative-03:hover .card-m .card-back {
     transform: rotateX(180deg);
 }
 
+.creative-03 .card-a {
+    transition: all .75s ease-in;
+    transition-delay: 1.2s;
+}
+
 .creative-03:hover .card-a {
     transform: translateX(-130px) translatey(10px) rotate(-20deg);
+    transition: all .75s ease-in;
     transition-delay: 0.4s;
     box-shadow: #4ceffe 0px 0px 10px,
     #4ceffe 0px 0px 20px,
     #4ceffe 0px 0px 40px;
-    z-index: 4;
+
 }
 
 .creative-03:hover .card-a .card-back {
     transform: rotateX(180deg);
+}
+
+.creative-03 .card-g {
+    transition: all .75s ease-in;
+    transition-delay: 0.8s;
 }
 
 .creative-03:hover .card-g {
@@ -182,6 +199,11 @@ body {
     transform: rotateX(180deg);
 }
 
+.creative-03 .card-i {
+    transition: all .75s ease-in;
+    transition-delay: 0.4s;
+}
+
 .creative-03:hover .card-i {
     transform: translateX(130px) translatey(10px) rotate(20deg);
     transition-delay: 1.2s;
@@ -193,6 +215,11 @@ body {
 
 .creative-03:hover .card-i .card-back {
     transform: rotateX(180deg);
+}
+
+.creative-03 .card-c {
+    transition: all .75s ease-in;
+    transition-delay: 0s;
 }
 
 .creative-03:hover .card-c {
