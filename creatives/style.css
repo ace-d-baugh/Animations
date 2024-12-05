@@ -274,3 +274,228 @@ body {
     color: #333;
     border-radius: 10px;
 }
+
+.creative-04 .craddle {
+    display: flex;
+    border-top: 10px solid silver;
+}
+
+.creative-04 .craddle span {
+    display: block;
+    width: 3px;
+    height: 300px;
+    background-color: silver;
+    margin: 0 29px;
+    position: relative;
+    transform-origin: top;
+}
+
+.creative-04 .craddle span::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: silver;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    font-weight: 700;
+    color: #333;
+}
+
+.creative-04 .craddle span:nth-child(1)::before {
+    content: 'M';
+}
+
+.creative-04 .craddle span:nth-child(2)::before {
+    content: 'A';
+}
+
+.creative-04 .craddle span:nth-child(3)::before {
+    content: 'G';
+}
+
+.creative-04 .craddle span:nth-child(4)::before {
+    content: 'I';
+}
+
+.creative-04 .craddle span:nth-child(5)::before {
+    content: 'C';
+}
+
+.creative-04 .craddle:hover span:first-child {
+    animation: left-arm 1s linear infinite alternate;
+}
+
+.creative-04 .craddle:hover span:last-child {
+    animation: right-arm 1s linear infinite alternate;
+}
+
+.creative-04 .craddle:hover span:first-child::before {
+    animation: left-glow 1s linear infinite alternate;
+}
+.creative-04 .craddle:hover span:nth-child(2)::before {
+    animation: a-glow 1s linear infinite alternate;
+}
+
+.creative-04 .craddle:hover span:nth-child(3)::before {
+    animation: g-glow 1s linear infinite alternate;
+}
+
+.creative-04 .craddle:hover span:nth-child(4)::before {
+    animation: i-glow 1s linear infinite alternate;
+}
+
+
+.creative-04 .craddle:hover span:last-child::before {
+    animation: right-glow 1s linear infinite alternate;
+}
+
+@keyframes left-arm {
+    0% {
+        transform: rotate(60deg);
+    }
+    45% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes right-arm {
+    0% {
+        transform: rotate(0deg);
+    }
+    55% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-60deg);
+    }
+}
+
+@keyframes left-glow {
+    0% {
+        background-color: #4ceffe;
+        box-shadow: #4ceffe 0px 0px 10px,
+        #4ceffe 0px 0px 20px,
+        #4ceffe 0px 0px 40px;
+    }
+    25% {
+        background-color: silver;
+    }
+    100% {
+        background-color: silver;
+    }
+}
+
+@keyframes right-glow {
+    0% {
+        background-color: silver;
+    }
+    75% {
+        background-color: silver;
+    }
+    100% {
+        background-color: #4ceffe;
+        box-shadow: #4ceffe 0px 0px 10px,
+        #4ceffe 0px 0px 20px,
+        #4ceffe 0px 0px 40px;
+    }
+}
+
+@keyframes a-glow {
+
+    0% {
+        background-color: silver;
+    }
+    25% {
+        background-color: silver;
+    }
+    40% {
+        background-color: silver;
+        box-shadow: none;
+    }
+    45% {
+        background-color: #4ceffe;
+        box-shadow: #4ceffe 0px 0px 10px,
+        #4ceffe 0px 0px 20px,
+        #4ceffe 0px 0px 40px;
+    }
+    50% {
+        background-color: silver;
+        box-shadow: none;
+    }
+    75% {
+        background-color: silver;
+    }
+    100% {
+        background-color: silver;
+    }
+}
+
+@keyframes g-glow {
+
+    0% {
+        background-color: silver;
+    }
+    25% {
+        background-color: silver;
+    }
+    45% {
+        background-color: silver;
+        box-shadow: none;
+    }
+    50% {
+        background-color: #4ceffe;
+        box-shadow: #4ceffe 0px 0px 10px,
+        #4ceffe 0px 0px 20px,
+        #4ceffe 0px 0px 40px;
+    }
+    55% {
+        background-color: silver;
+        box-shadow: none;
+    }
+    75% {
+        background-color: silver;
+    }
+    100% {
+        background-color: silver;
+    }
+}
+
+@keyframes i-glow {
+
+    0% {
+        background-color: silver;
+    }
+    25% {
+        background-color: silver;
+    }
+    50% {
+        background-color: silver;
+        box-shadow: none;
+    }
+    55% {
+        background-color: #4ceffe;
+        box-shadow: #4ceffe 0px 0px 10px,
+        #4ceffe 0px 0px 20px,
+        #4ceffe 0px 0px 40px;
+    }
+    60% {
+        background-color: silver;
+        box-shadow: none;
+    }
+    75% {
+        background-color: silver;
+    }
+    100% {
+        background-color: silver;
+    }
+}
