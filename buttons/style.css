@@ -23,6 +23,11 @@ body {
     margin: 20px;
 }
 
+.button-01,
+.button-02 {
+    margin-bottom: 100px;
+}
+
 .glass-button a {
     display: flex;
     justify-content: center;
@@ -136,4 +141,194 @@ body {
     0 0 15px lime, 
     0 0 30px lime, 
     0 0 60px lime;
+}
+
+.button-02 .drawing{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+
+.button-02 .drawing a {
+    position: absolute;
+    text-decoration: none;
+    font-size: 1.5em;
+    padding: 10px 20px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: silver;
+    box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.8);
+    transition: all 0.1s;
+}
+
+.button-02 .drawing a:hover {
+    color: #4ceffe;
+    animation: glow 0.5s ease-out forwards;
+    animation-delay: 1s;
+}
+
+.button-02 .drawing a:active {
+    color: #333;
+    background-color: #4ceffe;
+    transform: scale(0.95);
+}
+
+.button-02 .drawing a::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 10px;
+    height: 10px;
+    background-color: #4ceffe;
+    box-shadow: #4ceffe 0px 0px 20px,
+    #4ceffe 0px 0px 40px,
+    #4ceffe 0px 0px 60px,
+    #4ceffe 0px 0px 80px;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+.button-02 .drawing a:hover::before {
+    animation: draw-border 1s linear forwards;
+}
+
+.button-02 .drawing span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all 1s;
+}
+
+.button-02 .drawing span:nth-child(1) {
+    position: absolute;
+    width: 0%;
+    border-top: #4ceffe 2px solid;
+    top: 0;
+    left: 0;
+}
+
+.button-02 .drawing a:hover span:nth-child(1) {
+    animation: draw-top .25s linear forwards;
+}
+
+.button-02 .drawing span:nth-child(2) {
+    position: absolute;
+    height: 0%;
+    border-right: #4ceffe 2px solid;
+    top: 0;
+    right: 0;
+}
+
+.button-02 .drawing a:hover span:nth-child(2) {
+    animation: draw-right .25s linear forwards;
+    animation-delay: .25s;
+}
+
+.button-02 .drawing span:nth-child(3) {
+    position: absolute;
+    width: 0%;
+    border-bottom: #4ceffe 2px solid;
+    bottom: 0;
+    right: 0;
+}
+
+.button-02 .drawing a:hover span:nth-child(3) {
+    animation: draw-bottom .25s linear forwards;
+    animation-delay: .5s;
+}
+
+.button-02 .drawing span:nth-child(4) {
+    position: absolute;
+    height: 0%;
+    border-left: #4ceffe 2px solid;
+    bottom: 0;
+    left: 0;
+    transform-origin: bottom;
+}
+
+.button-02 .drawing a:hover span:nth-child(4) {
+    animation: draw-left .25s linear forwards;
+    animation-delay: .75s;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: none
+    }
+    to {
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8),
+        0 0 20px #4ceffe, 
+        0 0 40px #4ceffe, 
+        0 0 80px #4ceffe, 
+        0 0 120px #4ceffe;
+    }
+}
+
+@keyframes draw-border {
+    0% {
+        top: -5px;
+        left: -5px;
+        opacity: 1;
+    }
+    25% {
+        top: -5px;
+        left: calc(100% - 5px);
+    }
+    50% {
+        top: calc(100% - 5px);
+        left: calc(100% - 5px);
+    }
+    75% {
+        top: calc(100% - 5px);
+        left: -5px;
+    }
+    99.99% {
+        top: -5px;
+        left: -5px;
+        opacity: 1;
+    }
+    100% {
+        top: -5px;
+        left: -5px;
+        opacity: 0;
+    }
+}
+
+@keyframes draw-top {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes draw-right {
+    from {
+        height: 0%;
+    }
+    to {
+        height: 100%;
+    }
+}
+
+@keyframes draw-bottom {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes draw-left {
+    from {
+        height: 0%;
+    }
+    to {
+        height: 100%;
+    }
 }
