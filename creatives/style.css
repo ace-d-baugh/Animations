@@ -102,6 +102,28 @@ body {
     -webkit-text-stroke: #000 1px;
 }
 
+.creative-02 h2:hover {
+    animation: wobble .2s ease-in-out forwards;
+}
+
+@keyframes wobble {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(10deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
 .creative-03 {
     margin-bottom: 4rem;
     perspective: 1000px;
