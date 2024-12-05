@@ -499,3 +499,76 @@ body {
         background-color: silver;
     }
 }
+
+.creative-05 .container{
+    width: 300px;
+    border-bottom: 3px solid #4ceffe;
+    animation: wobble 2s linear infinite;
+    position: relative;
+    margin: 100px 0;
+}
+
+.creative-05 .container .hex {
+    position: absolute;
+    bottom: 14px;
+    left: 0;
+    background-color: #4ceffe;
+    width: 50px;
+    height: 30px;
+    animation: rotate 2s linear infinite alternate;
+}
+
+.creative-05 .container .hex::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 30px;
+    background-color: #4ceffe;
+    transform: rotate(60deg);
+}
+
+.creative-05 .container .hex::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 30px;
+    background-color: #4ceffe;
+    transform: rotate(-60deg);
+}
+
+@keyframes wobble {
+    0% {
+        transform: rotate(30deg);
+    }
+    25% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-30deg);
+    }
+    75% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(30deg);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+        left: 0;
+    }
+    50% {
+        transform: rotate(720deg);
+        left: calc(100% - 50px);
+    }
+    100% {
+        transform: rotate(0deg);
+        left: 0;
+    }
+}
