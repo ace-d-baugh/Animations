@@ -209,7 +209,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 600px;
+    height: 400px;
     width: 320px;
     border-bottom: 5px solid lime;
     margin-bottom: 50px;
@@ -217,6 +217,7 @@ body {
 
 .loader-04 .cloud {
     position: absolute;
+    top: 0;
     width: 100%;
     height: 100px;
     background: #4ceffe;
@@ -240,12 +241,18 @@ body {
     justify-content: center;
     z-index: 1;
     gap: 2px;
+    transform: translateY(-95px);
 }
 
 .loader-04 .rain span {
     width: 10px;
     height: 10px;
     background: #4ceffe;
+    box-shadow: #4ceffe 0 0 10px,
+    #4ceffe 0 0 20px,
+    #4ceffe 0 0 30px,
+    #4ceffe 0 0 40px,
+    #4ceffe 0 0 50px;
     border-radius: 50%;
     animation: rain linear infinite;
     transform-origin: bottom;
