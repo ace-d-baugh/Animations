@@ -28,8 +28,7 @@ body {
 .loader-01,
 .loader-02,
 .loader-03,
-.loader-04,
-.loader-05 {
+.loader-04 {
     position: relative;
     display: flex;
     justify-content: center;
@@ -271,65 +270,3 @@ body {
     }
 }
 
-.loader-05 {
-    height: 400px;
-    width: 320px;
-    border-bottom: 5px solid lime;
-    margin: 50px 0;
-}
-
-.loader-05 .cloud {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100px;
-    background: #4ceffe;
-    border-radius: 50px;
-}
-
-.loader-05 .cloud::before {
-    content: '';
-    position: absolute;
-    width: 110px;
-    height: 110px;
-    background: #4ceffe;
-    border-radius: 50%;
-    transform: translate(40px, -50px);
-    box-shadow: #4ceffe 90px 0 0 30px;
-}
-
-.loader-05 .rain {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    z-index: 1;
-    gap: 2px;
-    transform: translateY(-95px);
-}
-
-.loader-05 .rain span {
-    width: 10px;
-    height: 10px;
-    background: #4ceffe;
-    box-shadow: #4ceffe 0 0 10px,
-    #4ceffe 0 0 20px,
-    #4ceffe 0 0 30px,
-    #4ceffe 0 0 40px,
-    #4ceffe 0 0 50px;
-    border-radius: 50%;
-    animation: rain linear infinite;
-    transform-origin: bottom;
-    animation-duration: calc(15s / var(--time));
-}
-
-@keyframes rain {
-    0% {
-        transform: translateY(0) scale(1);
-    }
-    70% {
-        transform: translateY(290px) scale(1);
-    }
-    100% {
-        transform: translateY(290px) scale(0);
-    }
-}
