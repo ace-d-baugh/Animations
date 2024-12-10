@@ -28,7 +28,8 @@ body {
 .loader-01,
 .loader-02,
 .loader-03,
-.loader-04 {
+.loader-04,
+.loader-05 {
     position: relative;
     display: flex;
     justify-content: center;
@@ -267,6 +268,67 @@ body {
     #4ceffe 0px 0px 20px,
     #4ceffe 0px 0px 30px,
     #4ceffe 0px 0px 40px;
+    }
+}
+
+.loader-05 {
+    width: 150px;
+    height: 150px;
+}
+
+.loader-05 span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.loader-05 span:nth-child(1) {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    z-index: 2;
+}
+
+.loader-05 span:nth-child(2) {
+    background: #4ceffe;
+    animation: orbit 4s linear infinite;
+}
+
+.loader-05 span:nth-child(3) {
+    background: #4ceffe;
+    animation: orbit 4s linear infinite -2s;
+}
+
+@keyframes orbit {
+    0% {
+        transform: translate(-150px, 50px) scale(.4);
+        z-index: 1;
+    }
+    1% {
+        transform: translate(-150px, 50px) scale(.4);
+        z-index: 1;
+    }
+    25% {
+        transform: translate(0px, 0px) scale(.3);
+        z-index: 1;
+    }
+    50% {
+        transform: translate(150px, -50px) scale(.4);
+        z-index: 1;
+    }
+    75% {
+        transform: translate(0px, 0px) scale(.5);
+        z-index: 3;
+    }
+    99% {
+        transform: translate(-150px, 50px) scale(.4);
+        z-index: 3;
+    }
+    100% {
+        transform: translate(-150px, 50px) scale(.4);
+        z-index: 1;
     }
 }
 
