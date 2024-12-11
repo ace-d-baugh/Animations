@@ -216,3 +216,87 @@ body {
     0 0 30px #4ceffe,
     0 0 60px #4ceffe;
 }
+
+.menu-05 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.menu-05 span {
+    position: relative;
+    overflow: hidden;
+}
+
+.menu-05 span::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -100%;
+    width: 100%;
+    height: 1px;
+    background: #4ceffe;
+    transform: translateX(-100%, 50%);
+    transition: all 0.5s;
+    z-index: -1;
+}
+
+.menu-05 span:hover::before {
+    left: 100%;
+}
+
+.menu-05 a {
+    position: relative;
+    margin: 0;
+    padding: 5px 10px;
+    display: block;
+    font-size: 4em;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+    line-height: 1em;
+    font-weight: 900;
+    color: transparent;
+    transition: all 0.5s;
+}
+
+.menu-05 a::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: silver;
+    overflow: hidden;
+    transition: all 0.5s .2s;
+    padding: 5px 0;
+    box-sizing: border-box;
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+}
+
+.menu-05 a::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: silver;
+    overflow: hidden;
+    transition: all 0.5s .2s;
+    padding: 5px 0;
+    box-sizing: border-box;
+    clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+}
+
+.menu-05 a:hover::before {
+    color: #4ceffe;
+    transform: translate(8px, -3px);
+}
+
+.menu-05 a:hover::after {
+    color: #4ceffe;
+    transform: translate(-8px, 3px);
+}
