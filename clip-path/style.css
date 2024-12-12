@@ -25,25 +25,26 @@ body {
     align-items: center;
     flex-direction: column;
     text-align: center;
+    border-radius: 20px;
+    overflow: hidden;
 }
 
-.top {
+.top,
+.bottom {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: #4ceffe;
+}
+
+.top {
+    background: rgba(76, 239, 254, 0.2);
     clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
 }
 
 .bottom {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: lime;
+    background: rgba(0, 255, 0, 0.2);
     clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
 }
 
@@ -58,25 +59,37 @@ body {
 }
 
 .text-top {
-    top: 30%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-shadow: #4ceffe 0 0 5px, 
+    #4ceffe 0 0 10px,
+    #4ceffe 0 0 15px,
+    #4ceffe 0 0 20px,
+    #4ceffe 0 0 25px;
+
 }
 
 .text-bottom {
-    top: 30%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-shadow: lime 0 0 5px, 
+    lime 0 0 10px,
+    lime 0 0 15px,
+    lime 0 0 20px,
+    lime 0 0 25px;
 }
 
 @keyframes bounce {
-    0% {
-        top: 30%;
+    0%, 45% {
+        top: 25%;
     }
-    50% {
-        top: 70%;
+
+    55%, 90% {
+        top: 75%;
     }
     100% {
-        top: 30%;
+        top: 25%;
     }
 }
