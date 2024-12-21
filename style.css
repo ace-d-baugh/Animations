@@ -70,7 +70,6 @@ body {
     text-align: center; 
     opacity: 0;
     transform: translateX(50px);
-    transform: rotate(-15deg);
 }
 
 .menu-04 a:hover {
